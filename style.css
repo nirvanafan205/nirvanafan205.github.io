@@ -1,0 +1,283 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+/* section 1 */
+#intro {
+    padding: 4rem 1rem 10rem 1rem; /*top right bottom left */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: cornflowerblue;
+    display: block;
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+/* section 2 */
+#contact h2 {
+    font-family: cursive;
+    color: violet;
+}
+
+#contact {
+    width: 400px;
+    padding: 3rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* background color divs */
+.section-plum {
+    background-color: slateblue;
+}
+
+.gradient {
+    background: radial-gradient(circle, rgba(8,19,137,1) 37%, rgba(9,115,121,1) 54%, rgba(116,4,200,1) 83%, rgba(8,0,255,1) 100%); 
+    height: 6px;
+}
+
+#contact a {
+    margin-top: 3rem;
+    color: tomato;
+}
+
+#contact .hello {
+    color: var(--white);
+}
+
+/* Navigation bar */
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+    text-align: center;
+}
+
+/* navbar organizing */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* puts all links together */
+    flex-flow: row wrap;
+    justify-content: center;
+    /* centers everything in the row */
+    align-items: center;
+    gap: 2rem;
+    /* puts gaps between each elements */
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    /* pushes name to it's own line */
+    text-align: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    /* makes area clickable */
+
+}
+
+nav a:hover {
+    color: var(--magenta);
+}
+
+/* Icon thingy for linkedin and github */
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+.button {
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--mono);
+    text-decoration: none;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--hotmag);
+}
+
+/* responsive design */
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        /*limits width of screen */
+        margin: 0 auto;
+        /* centers */
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
+.end {
+    padding: 1rem;
+    text-align: center;
+}
+
+@keyframes rainbow {
+
+    100%,
+    0% {
+        color: red;
+    }
+
+    8% {
+        color: blueviolet;
+    }
+
+    16% {
+        color: deeppink;
+    }
+
+    25% {
+        color: magenta;
+    }
+
+    33% {
+        color: royalblue;
+    }
+
+    41% {
+        color: thistle;
+    }
+
+    50% {
+        color: aqua;
+    }
+
+    58% {
+        color: orange;
+    }
+
+    66% {
+        color: plum;
+    }
+
+    75% {
+        color: midnightblue;
+    }
+
+    83% {
+        color: hotpink;
+    }
+
+    91% {
+        color: forestgreen
+    }
+}
+
+.end {
+    animation: rainbow 9s infinite linear;
+}
+
+/*footer thingys */
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    /* puts all links together */
+    flex-flow: row wrap;
+    justify-content: center;
+    /* centers everything in the row */
+    align-items: center;
+    /* puts gaps between each elements */
+    gap: 2rem;
+    font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
